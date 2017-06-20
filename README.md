@@ -1,9 +1,16 @@
 ## Stack
 
 * [Grunt - task runner](https://gruntjs.com/)
+* [Bootstrap 3](http://getbootstrap.com)
+* [jQuery 3](https://jquery.com/)
 * [SCSS - CSS preprocessor](http://sass-lang.com/)
 * [ECT - template engine](http://ectjs.com/)
 * [SCSS Lint](https://github.com/brigade/scss-lint)
+
+## Browser support
+
+* Chrome/Edge/Firefox/Safari/Opera: latest
+* Internet Explorer: 9+
 
 ## Installation
 

@@ -33,7 +33,7 @@
           files: [
             {
               src: [
-                '<%= srcPath %>/js/vendor/jquery-1.12.4.min.js'
+                '<%= srcPath %>/js/vendor/jquery.min.js'
               ],
               dest: '<%= destPath %>/js/vendor.js'
             },
