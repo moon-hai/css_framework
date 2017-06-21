@@ -87,6 +87,15 @@
       htmllint: {
         all: ['<%= destPath %>/**/*.html']
       },
+      scsslint: {
+        allFiles: [
+          '<%= srcPath %>/scss/**/*.scss'
+        ],
+        options: {
+          config: '.scss-lint.yml',
+          colorizeOutput: true
+        }
+      },
       watch: {
         js: {
           files: [
@@ -122,7 +131,7 @@
 
     grunt.registerTask('default',         ['build']);
     grunt.registerTask('build',           ['css', 'js', 'html']);
-    grunt.registerTask('css',             ['sass:css']);
+    grunt.registerTask('css',             ['sass:css', 'scsslint']);
     grunt.registerTask('js',              ['concat', 'uglify']);
     grunt.registerTask('html',            ['ect', 'copy:html', 'clean:ect', 'htmllint'])
 
