@@ -5,9 +5,9 @@
   "author": "1PAC Vietnam, Co.,Ltd",
   "license": "ISC",
   "scripts": {
-    "server": "php -S localhost:8001 -t ./public",
-    "build":  "grunt build",
-    "watch":  "grunt watch",
+    "start": "php -S localhost:8001 -t ./public",
+    "build": "grunt build",
+    "watch": "grunt watch",
     "scss-lint": "scss-lint --config .scss-lint.yml"
   },
   "repository": {
@@ -15,13 +15,14 @@
     "url": "https://github.com/1PACVietnam/html-starter"
   },
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
+    "grunt": "^0.4.5",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^3.0.1",
-    "grunt-ect": "^0.1.2"
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ect": "^0.1.2",
+    "grunt-html": "^8.4.0"
   }
 }

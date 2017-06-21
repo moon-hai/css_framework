@@ -84,6 +84,9 @@
       clean: {
         ect: ['<%= srcPath %>/_temp', '<%= destPath %>/_temp']
       },
+      htmllint: {
+        all: ['<%= destPath %>/**/*.html']
+      },
       watch: {
         js: {
           files: [
@@ -121,7 +124,7 @@
     grunt.registerTask('build',           ['css', 'js', 'html']);
     grunt.registerTask('css',             ['sass:css']);
     grunt.registerTask('js',              ['concat', 'uglify']);
-    grunt.registerTask('html',            ['ect', 'copy:html', 'clean:ect'])
+    grunt.registerTask('html',            ['ect', 'copy:html', 'clean:ect', 'htmllint'])
 
   };
 

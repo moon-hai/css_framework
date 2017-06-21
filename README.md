@@ -5,6 +5,7 @@
 * [jQuery 3](https://jquery.com/)
 * [SCSS - CSS preprocessor](http://sass-lang.com/)
 * [ECT - template engine](http://ectjs.com/)
+* [HTML validator](https://github.com/validator/validator)
 * [SCSS Lint](https://github.com/brigade/scss-lint)
 
 ## Browser support
@@ -44,6 +45,11 @@ npm install -g grunt-cli
 ```
 echo 'export PATH="/usr/local/opt/node@6/bin:$PATH"' > ~/.bash_profile
 source ~/.bash_profile
+```
+
+### JDK for html validator
+```
+brew cask install java
 ```
 
 ### Install dependencies
