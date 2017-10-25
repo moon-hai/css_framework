@@ -5,10 +5,11 @@
   "author": "1PAC Vietnam, Co.,Ltd",
   "license": "ISC",
   "scripts": {
-    "start": "php -S localhost:8001 -t ./public",
+    "start": "php -S localhost:8001 -t ../public",
     "build": "grunt build",
     "watch": "grunt watch",
-    "scss-lint": "scss-lint --config .scss-lint.yml"
+    "scss-lint": "scss-lint --config .scss-lint.yml",
+    "copy-to-deploy": "mkdir -p ~/Documents/_sml_tmp && /bin/cp -Rf ../public/* ~/Documents/_sml_tmp/ && git checkout deploy && /bin/cp -Rf ~/Documents/_sml_tmp/* ../public/"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.4",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
@@ -23,7 +25,6 @@
     "grunt-contrib-uglify": "^3.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-ect": "^0.1.2",
-    "grunt-html": "^8.4.0",
     "grunt-scss-lint": "^0.5.0"
   }
 }
