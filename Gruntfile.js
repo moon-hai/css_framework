@@ -4,7 +4,7 @@
     grunt.config.init({
       pkg: grunt.file.readJSON('package.json'),
       srcPath: './src',
-      destPath: './public',
+      destPath: '../public',
       sass: {
         css: {
           options: {
@@ -15,6 +15,16 @@
             '<%= destPath %>/css/main.css': ['<%= srcPath %>/scss/main.scss']
           }
         },
+      },
+      autoprefixer: {
+        options: {
+          browsers: ['last 2 versions', 'ie >= 10']
+        },
+        main_css: {
+          files: {
+            '<%= destPath %>/css/main.css': ['<%= destPath %>/css/main.css']
+          }
+        }
       },
       ect: {
         options: {
@@ -47,16 +57,33 @@
         }
       },
       uglify: {
-        options: {
-          mangle: false,
-          compress: false,
-          beautify: {
-            indent_level: 2,
-            quote_style: 1,
-            width: 140
-          }
+        vendor_js: {
+          options: {
+            mangle: {
+              reserved: ['jQuery']
+            },
+            compress: true,
+            beautify: false
+          },
+          files: [{
+            expand: true,
+            cwd: '<%= destPath %>/js',
+            src: ['vendor.js'],
+            dest: '<%= destPath %>/js',
+            ext: '.js',
+            extDot: 'last'
+          }]
         },
-        js: {
+        main_js: {
+          options: {
+            mangle: false,
+            compress: false,
+            beautify: {
+              indent_level: 2,
+              quote_style: 1,
+              width: 140
+            }
+          },
           files: [{
             expand: true,
             cwd: '<%= destPath %>/js',
@@ -84,16 +111,14 @@
       clean: {
         ect: ['<%= srcPath %>/_temp', '<%= destPath %>/_temp']
       },
-      htmllint: {
-        all: ['<%= destPath %>/**/*.html']
-      },
       scsslint: {
         allFiles: [
           '<%= srcPath %>/scss/**/*.scss'
         ],
         options: {
           config: '.scss-lint.yml',
-          colorizeOutput: true
+          colorizeOutput: true,
+          failOnWarning: false
         }
       },
       watch: {
@@ -101,7 +126,7 @@
           files: [
             '<%= srcPath %>/js/**/*.js'
           ],
-          tasks: ['js']
+          tasks: ['js_dev']
         },
         css: {
           files: [
@@ -126,14 +151,14 @@
       }
     });
 
-
     /* Grunt tasks */
 
     grunt.registerTask('default',         ['build']);
     grunt.registerTask('build',           ['css', 'js', 'html']);
-    grunt.registerTask('css',             ['sass:css', 'scsslint']);
+    grunt.registerTask('css',             ['sass:css', 'scsslint', 'autoprefixer']);
     grunt.registerTask('js',              ['concat', 'uglify']);
-    grunt.registerTask('html',            ['ect', 'copy:html', 'clean:ect', 'htmllint'])
+    grunt.registerTask('js_dev',          ['concat', 'uglify:main_js']);
+    grunt.registerTask('html',            ['ect', 'copy:html', 'clean:ect']);
 
   };
 
