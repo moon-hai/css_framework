@@ -3,8 +3,6 @@
 scss_files: "./src/scss/**/*.scss"
 
 exclude:
-  - './src/scss/base/**'
-  - './src/scss/mixins/**'
   - './node_modules/**'
 # List of gem names to load custom linters from (make sure they are already
 # installed)
@@ -57,7 +55,7 @@ linters:
     style: same_line # or 'new_line'
 
   EmptyLineBetweenBlocks:
-    enabled: true
+    enabled: false
     ignore_single_line_blocks: true
 
   EmptyRule:
@@ -113,7 +111,7 @@ linters:
 
   NestingDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 4
     ignore_parent_selectors: false
 
   PlaceholderInExtend:
@@ -129,7 +127,7 @@ linters:
     max_properties: 10
 
   PropertySortOrder:
-    enabled: true
+    enabled: false
     ignore_unspecified: false
     min_properties: 2
     separate_groups: false
@@ -153,7 +151,7 @@ linters:
     properties: {}
 
   PseudoElement:
-    enabled: true
+    enabled: false
 
   QualifyingElement:
     enabled: true
@@ -249,7 +247,7 @@ linters:
     properties: []
 
   VendorPrefix:
-    enabled: true
+    enabled: false
     identifier_list: base
     additional_identifiers: []
     excluded_identifiers: []
