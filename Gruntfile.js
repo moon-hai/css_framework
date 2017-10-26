@@ -4,7 +4,7 @@
     grunt.config.init({
       pkg: grunt.file.readJSON('package.json'),
       srcPath: './src',
-      destPath: '../public',
+      destPath: './public',
       sass: {
         css: {
           options: {
