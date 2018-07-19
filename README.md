@@ -1,7 +1,6 @@
 ## Stack
 
 * [Grunt - task runner](https://gruntjs.com/)
-* [jQuery 3](https://jquery.com/)
 * [minireset.css](https://github.com/jgthms/minireset.css/blob/master/minireset.css)
 * [SCSS - CSS preprocessor](http://sass-lang.com/)
 * [ECT - template engine](http://ectjs.com/)

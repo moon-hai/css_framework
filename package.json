@@ -1,5 +1,5 @@
 {
-  "name": "html-starter",
+  "name": "1pac-css",
   "version": "0.1.1",
   "description": "",
   "author": "1PAC Vietnam, Co.,Ltd",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/1PACVietnam/html-starter"
+    "url": "https://github.com/moon-hai/css-framework.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
