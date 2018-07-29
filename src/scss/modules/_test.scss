@@ -1,0 +1,7 @@
+.row + .row {
+  margin-top: 24px;
+}
+
+[class*='col-'] > div {
+  background: $primary-color;
+}
