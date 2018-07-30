@@ -1,0 +1,47 @@
+.card {
+  background-color: $light-color;
+  border: 1px solid lighten($gray-color, 8%);
+  border-radius: $radius;
+  transition: all .3s ease;
+
+  &:hover {
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, .4);
+  }
+
+  .card__image {
+    margin-top: 16px;
+    cursor: pointer;
+
+    &:first-child {
+      margin-top: 0;
+
+      img {
+        border-radius: $radius $radius 0 0;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+
+    }
+  }
+
+  .card__header,
+  .card__body {
+    padding: 8px 8px 0;
+  }
+
+  .card__header .subtitle {
+    font-size: $font-size-sm;
+    color: lighten($dark-color, 25%);
+  }
+
+  .card__body .preview {
+    font-size: $font-size-sm;
+  }
+
+  .card__footer {
+    padding: 8px;
+  }
+}
