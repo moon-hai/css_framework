@@ -1,3 +1,7 @@
+#main > section + section {
+  margin-top: 32px;
+}
+
 .row + .row {
   margin-top: 24px;
 }
