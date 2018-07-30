@@ -423,6 +423,21 @@ body {
     margin-left: 100%;
   }
 }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table td,
+.table th {
+  padding: 8px;
+  border: 1px solid #dbdbdb;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
 h1,
 h2,
 h3 {
@@ -510,8 +525,4 @@ h3 {
 
 .row + .row {
   margin-top: 24px;
-}
-
-[class*='col-'] > div {
-  background: #439aff;
 }
