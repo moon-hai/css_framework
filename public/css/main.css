@@ -526,3 +526,7 @@ h3 {
 .row + .row {
   margin-top: 24px;
 }
+
+#grid [class*='col-'] > div {
+  background: #439aff;
+}
