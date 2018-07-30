@@ -1,0 +1,23 @@
+@mixin respond-to-not-pc() {
+  @media (max-width: $sreen-pc - 1) {
+    @content
+  }
+}
+
+@mixin respond-to-pc() {
+  @media (min-width: $sreen-pc) {
+    @content
+  }
+}
+
+@mixin respond-to-tablet() {
+  @media (min-width: $sreen-mobile) and (max-width: $sreen-pc - 1) {
+    @content
+  }
+}
+
+@mixin respond-to-mobile() {
+  @media (max-width: $sreen-mobile - 1) {
+    @content
+  }
+}

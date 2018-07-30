@@ -1,0 +1,57 @@
+// Screen width
+$sreen-pc: 1200px !default;
+$sreen-tablet: 900px !default;
+$sreen-mobile: 600px !default;
+
+// Col offset
+$col-gutter: 16px !default;
+$col-gutter-md: 24px !default;
+
+$col-num: 12;
+
+// Core corlor
+$primary-color: #439aff !default;
+$secondary-color: #fc4e5c !default;
+$third-color: #fc9f00 !default;
+
+// Gray color
+$light-color: #fff !default;
+$dark-color: #333 !default;
+$gray-color: #dbdbdb !default;
+$body-font-color: $dark-color !default;
+
+// Font family
+$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
+$fallback-font-family: "Helvetica Neue", sans-serif !default;
+$body-font-family: $base-font-family, $fallback-font-family !default;
+
+// Font size - line height
+$font-size-base: 16px !default;
+$font-size-xl: 32px !default;
+$font-size-lg: 24px !default;
+$font-size-md: 20px !default;
+$font-size-sm: 12px !default;
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-xs: 1.2 !default;
+$line-height-zero: 1 !default;
+$body-font-size: $font-size-base !default;
+$body-line-height: $line-height-base !default;
+
+// Font weight
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$body-font-weight: $font-weight-normal !default;
+
+// Z-index
+$zindex-base: 3 !default;
+$zindex-1: 100 !default;
+$zindex-2: 200 !default;
+$zindex-3: 300 !default;
+
+// Border radius
+$radius: 4px !default;
+$radius-circle: 50% !default;
+
+// Letter spacing
+$body-spacing: .04rem !default;
