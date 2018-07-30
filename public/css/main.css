@@ -548,6 +548,118 @@ h3 {
   background-color: #fc4e5c;
 }
 
+.form-horizontal .form-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 4px 8px;
+  -webkit-appearance: none;
+  font-size: 16px;
+  line-height: 40px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  outline: 0;
+  transition: .3s all ease;
+}
+.form-input:focus {
+  border: 1px solid #459bff;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  display: none;
+}
+
+.form-radio,
+.form-checkbox {
+  display: inline-block;
+  padding-left: 20px;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+.form-radio input[type='radio'] + span,
+.form-radio input[type='checkbox'] + span,
+.form-checkbox input[type='radio'] + span,
+.form-checkbox input[type='checkbox'] + span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(0, -50%);
+  width: 16px;
+  height: 16px;
+  border: 1px solid #333;
+}
+.form-radio input[type='radio'] + span:after,
+.form-radio input[type='checkbox'] + span:after,
+.form-checkbox input[type='radio'] + span:after,
+.form-checkbox input[type='checkbox'] + span:after {
+  content: '';
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s all ease;
+}
+.form-radio input[type='radio']:checked + span,
+.form-radio input[type='checkbox']:checked + span,
+.form-checkbox input[type='radio']:checked + span,
+.form-checkbox input[type='checkbox']:checked + span {
+  border: 1px solid #439aff;
+}
+.form-radio input[type='radio']:checked + span:after,
+.form-radio input[type='checkbox']:checked + span:after,
+.form-checkbox input[type='radio']:checked + span:after,
+.form-checkbox input[type='checkbox']:checked + span:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.form-radio + .form-radio {
+  margin-left: 8px;
+}
+.form-radio input[type='radio'] + span {
+  border-radius: 50%;
+}
+.form-radio input[type='radio'] + span:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #439aff;
+  border-radius: 50%;
+}
+
+.form-checkbox input[type='checkbox'] + span:after {
+  width: 8px;
+  height: 10px;
+  border-bottom: 2px solid #439aff;
+  border-right: 2px solid #439aff;
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+  transform: rotate(45deg);
+}
+
 #main > section + section {
   margin-top: 32px;
 }
