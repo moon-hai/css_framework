@@ -1,0 +1,62 @@
+.btn:focus,
+.btn:active:focus {
+  outline: none;
+}
+
+.btn {
+  width: 160px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  font-weight: $font-weight-normal;
+  font-size: 14px;
+  line-height: 40px;
+  color: $dark-color;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  touch-action: manipulation;
+  background-color: $light-color;
+  border: 1px solid $gray-color;
+  border-radius: $radius;
+  outline: none;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover {
+    background-color: darken($gray-color, 3%);
+    color: $light-color;
+  }
+
+  &--primary {
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+
+    &:hover {
+      background-color: darken($primary-color, 3%);
+      color: $light-color;
+    }
+  }
+
+  &--warning {
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color;
+
+    &:hover {
+      background-color: darken($secondary-color, 3%);
+      color: $light-color;
+    }
+  }
+
+  &--danger {
+    background-color: $third-color;
+    border: 1px solid $third-color;
+
+    &:hover {
+      background-color: darken($third-color, 3%);
+      color: $light-color;
+    }
+  }
+}

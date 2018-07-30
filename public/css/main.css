@@ -444,6 +444,70 @@ h3 {
   line-height: 1.2;
 }
 
+.btn:focus,
+.btn:active:focus {
+  outline: none;
+}
+
+.btn {
+  width: 160px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 40px;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.btn:hover {
+  background-color: lightgray;
+  color: #fff;
+}
+.btn--primary {
+  background-color: #439aff;
+  border: 1px solid #439aff;
+}
+.btn--primary:hover {
+  background-color: #3492ff;
+  color: #fff;
+}
+.btn--warning {
+  background-color: #fc9f00;
+  border: 1px solid #fc9f00;
+}
+.btn--warning:hover {
+  background-color: #ed9500;
+  color: #fff;
+}
+.btn--danger {
+  background-color: #fc4e5c;
+  border: 1px solid #fc4e5c;
+}
+.btn--danger:hover {
+  background-color: #fc3f4e;
+  color: #fff;
+}
+
+#main > section + section {
+  margin-top: 32px;
+}
+
 .row + .row {
   margin-top: 24px;
 }
