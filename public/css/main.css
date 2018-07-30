@@ -519,6 +519,35 @@ h3 {
   color: #fff;
 }
 
+.label {
+  height: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: inline-block;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 4px;
+  border: 1px solid #dbdbdb;
+}
+.label--primary, .label--warning, .label--danger {
+  color: #fff;
+  border: 0;
+}
+.label--primary {
+  background-color: #439aff;
+}
+.label--warning {
+  background-color: #fc9f00;
+}
+.label--danger {
+  background-color: #fc4e5c;
+}
+
 #main > section + section {
   margin-top: 32px;
 }
