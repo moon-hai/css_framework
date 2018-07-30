@@ -494,13 +494,15 @@ h3 {
   background-color: lightgray;
   color: #fff;
 }
+.btn--primary, .btn--warning, .btn--danger {
+  color: #fff;
+}
 .btn--primary {
   background-color: #439aff;
   border: 1px solid #439aff;
 }
 .btn--primary:hover {
   background-color: #3492ff;
-  color: #fff;
 }
 .btn--warning {
   background-color: #fc9f00;
@@ -508,7 +510,6 @@ h3 {
 }
 .btn--warning:hover {
   background-color: #ed9500;
-  color: #fff;
 }
 .btn--danger {
   background-color: #fc4e5c;
@@ -516,18 +517,15 @@ h3 {
 }
 .btn--danger:hover {
   background-color: #fc3f4e;
-  color: #fff;
 }
 
 .label {
-  height: 24px;
-  padding-left: 16px;
-  padding-right: 16px;
   display: inline-block;
+  padding: 4px 16px;
   background-color: #fff;
   color: #333;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -536,16 +534,18 @@ h3 {
 }
 .label--primary, .label--warning, .label--danger {
   color: #fff;
-  border: 0;
 }
 .label--primary {
   background-color: #439aff;
+  border: 1px solid #439aff;
 }
 .label--warning {
   background-color: #fc9f00;
+  border: 1px solid #fc9f00;
 }
 .label--danger {
   background-color: #fc4e5c;
+  border: 1px solid #fc4e5c;
 }
 
 .form-group:not(:last-child) {
@@ -595,8 +595,8 @@ input[type='checkbox'] {
 .form-checkbox input[type='radio'] + span,
 .form-checkbox input[type='checkbox'] + span {
   position: absolute;
-  top: 0;
-  left: 50%;
+  left: 0;
+  top: 50%;
   transform: translate(0, -50%);
   width: 16px;
   height: 16px;
@@ -633,8 +633,8 @@ input[type='checkbox'] {
 }
 .form-radio input[type='radio'] + span:after {
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   width: 8px;
   height: 8px;

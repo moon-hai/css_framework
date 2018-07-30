@@ -30,13 +30,18 @@
     color: $light-color;
   }
 
+  &--primary,
+  &--warning,
+  &--danger {
+    color: $light-color;
+  }
+
   &--primary {
     background-color: $primary-color;
     border: 1px solid $primary-color;
 
     &:hover {
       background-color: darken($primary-color, 3%);
-      color: $light-color;
     }
   }
 
@@ -46,7 +51,6 @@
 
     &:hover {
       background-color: darken($warning-color, 3%);
-      color: $light-color;
     }
   }
 
@@ -56,7 +60,6 @@
 
     &:hover {
       background-color: darken($danger-color, 3%);
-      color: $light-color;
     }
   }
 }
