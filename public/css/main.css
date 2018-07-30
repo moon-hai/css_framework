@@ -465,14 +465,12 @@ h3 {
 }
 
 .btn {
-  width: 160px;
-  height: 40px;
   display: inline-block;
   vertical-align: middle;
-  padding: 0;
+  padding: 12px 16px;
   font-weight: 400;
   font-size: 14px;
-  line-height: 40px;
+  line-height: 1;
   color: #333;
   text-decoration: none;
   text-align: center;
