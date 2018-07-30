@@ -520,31 +520,32 @@ h3 {
 }
 
 .label {
-  width: 120px;
   height: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
   display: inline-block;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 4px;
-  cursor: pointer;
-}
-.label--default {
-  background: #fff;
-  color: #333;
   border: 1px solid #dbdbdb;
 }
+.label--primary, .label--warning, .label--danger {
+  color: #fff;
+  border: 0;
+}
 .label--primary {
-  background: #439aff;
+  background-color: #439aff;
 }
 .label--warning {
-  background: #fc9f00;
+  background-color: #fc9f00;
 }
 .label--danger {
-  background: #fc4e5c;
+  background-color: #fc4e5c;
 }
 
 #main > section + section {
