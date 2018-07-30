@@ -6,6 +6,6 @@
   margin-top: 24px;
 }
 
-[class*='col-'] > div {
+#grid [class*='col-'] > div {
   background: $primary-color;
 }
