@@ -5,7 +5,7 @@
   "author": "1PAC Vietnam, Co.,Ltd",
   "license": "ISC",
   "scripts": {
-    "start": "php -S localhost:8001 -t ../public",
+    "start": "php -S localhost:8001 -t ./public",
     "build": "grunt build",
     "watch": "grunt watch",
     "scss-lint": "scss-lint --config .scss-lint.yml",
