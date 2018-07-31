@@ -689,6 +689,23 @@ input[type='checkbox'] {
   overflow-x: auto;
 }
 
+.link {
+  text-decoration: none;
+  color: #439aff;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all .3s ease;
+}
+.link:hover {
+  color: #1a84ff;
+}
+.link--black {
+  color: #333;
+}
+.link--black:hover {
+  color: #1f1f1f;
+}
+
 #main > section + section {
   margin-top: 32px;
 }
