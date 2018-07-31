@@ -2,18 +2,18 @@
   text-decoration: none;
   color: $primary-color;
   font-size: $font-size-base;
-  font-weight: 400;
+  font-weight: $font-weight-normal;
   transition: all .3s ease;
 
   &:hover {
-    color: darken($primary-color, 20%);
+    color: darken($primary-color, 8%);
   }
 
-  &--darken {
+  &--black {
     color: $dark-color;
 
     &:hover {
-      color: lighten($dark-color, 20%);
+      color: darken($dark-color, 8%);
     }
   }
 }
