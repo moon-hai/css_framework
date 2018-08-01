@@ -31,10 +31,10 @@
       <div class="col-1"><div>col-1</div></div>
     </div>
     <div class="row">
-      <div class="col-3 col--md-6 col--sm-6"><div>col-3 col-md-6 col-sm-6</div></div>
-      <div class="col-3 col--md-6 col--sm-6"><div>col-3 col-md-6 col-sm-6</div></div>
-      <div class="col-3 col--md-6 col--sm-6"><div>col-3 col-md-6 col-sm-6</div></div>
-      <div class="col-3 col--md-6 col--sm-6"><div>col-3 col-md-6 col-sm-6</div></div>
+      <div class="col-3 col--md-6 col--sm-12"><div>col-3 col-md-6 col-sm-12</div></div>
+      <div class="col-3 col--md-6 col--sm-12"><div>col-3 col-md-6 col-sm-12</div></div>
+      <div class="col-3 col--md-6 col--sm-12"><div>col-3 col-md-6 col-sm-12</div></div>
+      <div class="col-3 col--md-6 col--sm-12"><div>col-3 col-md-6 col-sm-12</div></div>
     </div>
     <div class="row">
       <div class="col-4 col-offset-4"><div>col-4 col-offset-4</div></div>
@@ -128,7 +128,7 @@
   <section id="card" class="container">
     <h1>#Card</h1>
     <div class="row">
-      <div class="col-4">
+      <div class="col-4 col--md-6 col--sm-12">
         <div class="card">
           <div class="card__image">
             <img class="img-responsive" src="https://img.gadgethacks.com/img/37/49/63559344570639/0/customize-login-window-background-your-mac.w1456.jpg" alt="">
@@ -144,7 +144,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-4 col--md-6 col--sm-12">
         <div class="card">
           <div class="card__header">
             <h3 class="title">Card title</h3>
@@ -161,7 +161,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-4 col--md-6 col--sm-12">
         <div class="card">
           <div class="card__image">
             <img class="img-responsive" src="https://img.gadgethacks.com/img/37/49/63559344570639/0/customize-login-window-background-your-mac.w1456.jpg" alt="">
@@ -197,7 +197,7 @@
   <section id="form" class="container">
     <h1>#Form</h1>
     <div class="row">
-      <div class="col-6 col-sm-12">
+      <div class="col-6 col--sm-12">
         <form>
           <div class="form-group">
             <label class="form-label">First Name:</label>
@@ -238,6 +238,59 @@
         </form>
       </div>
     </div>
+  </section>
+
+  <section id="dropdown" class="container">
+    <h1>#Dropdown</h1>
+    <div class="row">
+      <div class="col-3 col--md-4 col--sm-12">
+        <div class="dropdown">
+          <input type="checkbox" id="dropdown-custom" name="dropdown-custom" class="dropdown__input">
+          <label for="dropdown-custom" class="dropdown__toggle">
+            Dropdown
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" preserveAspectRatio="none" height="9px" width="12px"><path d="M23.65862,5.64874a.93107.93107,0,0,0-1.31671,0L12,15.99065,1.65813,5.64874A.93105.93105,0,0,0,.34142,6.96545L11.99987,18.624,12,18.62383l.00012.00012L23.65862,6.96545A.93107.93107,0,0,0,23.65862,5.64874Z"/>
+            </svg>
+          </label>
+          <ul class="dropdown__content">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+            <li>Item 8</li>
+            <li>Item 9</li>
+            <li>Item 10</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dropdown" class="container">
+    <h1>#List</h1>
+    <h3>*List</h3>
+    <ul class="list">
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ul>
+    <h3>*List inline</h3>
+    <ul class="list-inline">
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ul>
+    <h3>*List unstyled</h3>
+    <ul>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ul>
   </section>
 </section>
   </body>
