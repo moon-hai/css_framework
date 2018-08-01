@@ -21,6 +21,7 @@
 [class*='col-'] {
   min-height: 1px;
   max-width: 100%;
+  margin-bottom: 24px;
   padding-left: $col-gutter;
   padding-right: $col-gutter;
 }
