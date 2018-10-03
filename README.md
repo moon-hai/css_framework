@@ -9,7 +9,7 @@
 ## Browser support
 
 * Chrome/Edge/Firefox/Safari/Opera: latest
-* Internet Explorer: 9+
+* Internet Explorer: 11+
 
 ## Installation
 
