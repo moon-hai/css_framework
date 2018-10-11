@@ -1,19 +1,19 @@
 .link {
   text-decoration: none;
-  color: $primary-color;
+  color: $dark-color;
   font-size: $font-size-base;
   font-weight: $font-weight-normal;
   transition: all .3s ease;
 
   &:hover {
-    color: darken($primary-color, 8%);
+    color: darken($dark-color, 20%);
   }
 
-  &--black {
-    color: $dark-color;
+  &--primary {
+    color: $primary-color;
 
     &:hover {
-      color: darken($dark-color, 8%);
+      color: darken($primary-color, 20%);
     }
   }
 }

@@ -8,7 +8,7 @@
     box-shadow: 0 5px 10px -2px rgba(0, 0, 0, .4);
   }
 
-  .card__image {
+  &__image {
     margin-top: 16px;
     cursor: pointer;
 
@@ -27,21 +27,21 @@
     }
   }
 
-  .card__header,
-  .card__body {
+  &__header,
+  &__body {
     padding: 8px 8px 0;
   }
 
-  .card__header .subtitle {
+  &__header .subtitle {
     font-size: $font-size-sm;
     color: lighten($dark-color, 25%);
   }
 
-  .card__body .preview {
+  &__body .preview {
     font-size: $font-size-sm;
   }
 
-  .card__footer {
+  &__footer {
     padding: 8px;
   }
 }

@@ -1,12 +1,12 @@
-.form-group:not(:last-child) {
-  margin-bottom: 16px;
+.field + .field {
+  margin-top: 16px;
 }
 
 .form-label {
   display: block;
   margin-bottom: 4px;
   font-size: 14px;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-light-bold;
   line-height: $line-height-zero;
 }
 
