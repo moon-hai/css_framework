@@ -1,25 +1,29 @@
 {
-  "name": "1pac-css",
-  "version": "0.1.1",
+  "name": "sample-01",
+  "version": "1.0.0",
   "description": "",
-  "author": "1PAC Vietnam, Co.,Ltd",
-  "license": "ISC",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "php -S localhost:8001 -t ./public",
     "build": "grunt build",
-    "watch": "grunt watch",
-    "scss-lint": "scss-lint --config .scss-lint.yml"
+    "deploy": "grunt deploy",
+    "scss-lint": "scss-lint --config .scss-lint.yml",
+    "copy-to-deploy": "mkdir -p ~/Documents/_test_tmp && /bin/cp -Rf ./public/* ~/Documents/_test_tmp/ && git checkout deploy && /bin/cp -Rf ~/Documents/_test_tmp/* ./public/"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/moon-hai/css-framework.git"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "grunt": "^0.4.5",
+    "grunt": "^1.0.3",
     "grunt-autoprefixer": "^3.0.4",
-    "grunt-contrib-clean": "^1.1.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-ect": "^0.1.2",
     "grunt-scss-lint": "^0.5.0"
