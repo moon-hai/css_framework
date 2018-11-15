@@ -1,31 +1,39 @@
 {
-  "name": "sample-01",
+  "name": "css-fw",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "php -S localhost:8001 -t ./public",
-    "build": "grunt build",
-    "deploy": "grunt deploy",
-    "scss-lint": "scss-lint --config .scss-lint.yml",
+    "start": "gulp watch",
+    "build": "gulp",
+    "deploy": "gulp deploy",
     "copy-to-deploy": "mkdir -p ~/Documents/_test_tmp && /bin/cp -Rf ./public/* ~/Documents/_test_tmp/ && git checkout deploy && /bin/cp -Rf ~/Documents/_test_tmp/* ./public/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "grunt": "^1.0.3",
-    "grunt-autoprefixer": "^3.0.4",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-clean": "^2.0.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^3.0.0",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^4.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-ect": "^0.1.2",
-    "grunt-scss-lint": "^0.5.0"
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.3",
+    "browserify": "^16.2.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-nunjucks": "^3.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-scss-lint": "^0.7.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "run-sequence": "^2.2.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "minimatch": "^3.0.2"
   }
 }

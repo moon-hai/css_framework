@@ -1,17 +1,18 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test page</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  {% include 'shared/_header.html' %}
+  {% block content %}
+  {% endblock %}
+  {% include 'shared/_footer.html' %}
 
-    <title>DEMO CSS FRAMEWORK</title>
-    <meta name="description" content="">
-
-    <link rel="stylesheet" href="/css/main.css">
-  </head>
-  <body>
-    <% content %>
-  </body>
+  <script src="/js/bundle.min.js"></script>
+</body>
 </html>
