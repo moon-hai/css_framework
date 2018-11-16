@@ -43,7 +43,7 @@ gulp.task('css', () => {
       }))
       .pipe(scssLint({ 'config': '.scss-lint.yml' }))
       .pipe(sourcemap.init())
-      .pipe(sass())
+      .pipe(sass({ outputStyle: 'compressed' }))
       .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
       .pipe(sourcemap.write())
       .pipe(gulp.dest(`${init.destPath}/css`))
@@ -52,14 +52,14 @@ gulp.task('css', () => {
 
 gulp.task('js', () => {
   browserify({
-    entries: `${init.srcPath}/js/bundle.js`,
+    entries: `${init.srcPath}/js/main.js`,
     debug: false
   })
   .transform(babelify, { 'presets': ['@babel/preset-env'] })
   .bundle().on('error', err => {
     console.log(err);
   })
-  .pipe(sourceStream('bundle.min.js'))
+  .pipe(sourceStream('main.min.js'))
   .pipe(buffer())
   .pipe(sourcemap.init())
   .pipe(uglify())
@@ -88,6 +88,6 @@ gulp.task('clean', () => {
 });
 
 gulp.task('default', ['html', 'image', 'css', 'js']);
-gulp.task('deploy', () => {
-  runSequence('clean', 'html', 'image', 'css', 'js')
+gulp.task('deploy', (callback) => {
+  runSequence('clean', 'html', 'image', 'css', 'js', callback);
 });
