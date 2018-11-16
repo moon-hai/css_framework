@@ -1,29 +1,27 @@
-ul {
-  &.list li {
-    padding-left: 16px;
-    position: relative;
+.list li {
+  padding-left: 16px;
+  position: relative;
 
-    &:before {
-      @include centered(0, 50%);
-      content: '';
-      width: 4px;
-      height: 4px;
-      border-radius: $radius-circle;
-      background-color: $dark-color;
-    }
+  &:before {
+    @include centered(0, 50%);
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: $radius-circle;
+    background-color: $dark-color;
   }
+}
 
-  &.list-inline {
-    font-size: 0;
-  
-    li {
-      display: inline-block;
-      margin-right: 16px;
-      font-size: $font-size-base;
-  
-      &:last-child {
-        margin-right: 0;
-      }
+.list-inline {
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 16px;
+    font-size: $font-size-base;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
