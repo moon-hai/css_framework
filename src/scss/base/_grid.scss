@@ -4,7 +4,7 @@
   margin: 0 auto;
   position: relative;
 
-  @include respond-to-not-pc() {
+  @include mediaquery--not-lg() {
     padding-left: $col-gutter;
     padding-right: $col-gutter;
   }
@@ -36,7 +36,7 @@
   }
 }
 
-@include respond-to-tablet() {
+@include mediaquery--sm() {
   @for $i from 1 through $col-num {
     .col--md-#{$i} {
       width: percentage($i / $col-num);
@@ -48,7 +48,7 @@
   }
 }
 
-@include respond-to-mobile() {
+@include mediaquery--sm() {
   @for $i from 1 through $col-num {
     .col--sm-#{$i} {
       width: percentage($i / $col-num);

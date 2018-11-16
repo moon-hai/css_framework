@@ -1,22 +1,22 @@
-@mixin respond-to-not-pc() {
+@mixin mediaquery--not-lg() {
   @media (max-width: $sreen-pc - 1) {
     @content
   }
 }
 
-@mixin respond-to-pc() {
+@mixin mediaquery--lg() {
   @media (min-width: $sreen-pc) {
     @content
   }
 }
 
-@mixin respond-to-tablet() {
+@mixin mediaquery--md() {
   @media (min-width: $sreen-mobile) and (max-width: $sreen-pc - 1) {
     @content
   }
 }
 
-@mixin respond-to-mobile() {
+@mixin mediaquery--sm() {
   @media (max-width: $sreen-mobile - 1) {
     @content
   }

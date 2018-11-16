@@ -13,6 +13,7 @@ var browserSync = require('browser-sync').create();
 var gtil = require('gulp-util');
 var clean = require('gulp-clean');
 var runSequence = require('run-sequence');
+var plumber = require('gulp-plumber');
 
 var init = {
   srcPath: './src',
@@ -20,49 +21,58 @@ var init = {
 };
 
 gulp.task('html', () => {
-  return gulp.src([`${init.srcPath}/html/**/*.html`, `!${init.srcPath}/html/shared/*`, `!${init.srcPath}/html/layout/*`])
-             .pipe(nunjucks.compile().on('error', () => {
-               gtil.log(`[${err.plugin}] There is an error from ${err.fileName}`)
-             }))
-             .pipe(gulp.dest(`${init.destPath}/`))
+  gulp.src([`${init.srcPath}/html/**/*.html`, `!${init.srcPath}/html/shared/*`, `!${init.srcPath}/html/layout/*`])
+      .pipe(nunjucks.compile().on('error', () => {
+        gtil.log(`[${err.plugin}] There is an error from ${err.fileName}`)
+      }))
+      .pipe(gulp.dest(`${init.destPath}/`))
 });
 
 gulp.task('image', () => {
-  return gulp.src(`${init.srcPath}/img/**/*.{gif,jpg,png,svg,ico}`)
-             .pipe(gulp.dest(`${init.destPath}/img`))
+  gulp.src(`${init.srcPath}/img/**/*.{gif,jpg,png,svg,ico}`)
+      .pipe(gulp.dest(`${init.destPath}/img`))
 });
 
 gulp.task('css', () => {
-  return gulp.src(`${init.srcPath}/scss/**/*.scss`)
-             .pipe(scssLint({ 'config': '.scss-lint.yml' }))
-             .pipe(sourcemap.init())
-             .pipe(sass())
-             .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
-             .pipe(sourcemap.write())
-             .pipe(gulp.dest(`${init.destPath}/css`))
-             .pipe(browserSync.stream())
+  gulp.src(`${init.srcPath}/scss/**/*.scss`)
+      .pipe(plumber({
+        handleError: err => {
+        console.log(err);
+        this.emit('end');
+        }
+      }))
+      .pipe(scssLint({ 'config': '.scss-lint.yml' }))
+      .pipe(sourcemap.init())
+      .pipe(sass())
+      .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
+      .pipe(sourcemap.write())
+      .pipe(gulp.dest(`${init.destPath}/css`))
+      .pipe(browserSync.stream())
 });
 
-// gulp.task('js', () => {
-//   return browserify({
-//     entries: `${init.srcPath}/js/bundle.js`,
-//     debug: false
-//   })
-//         .transform(babelify, { 'presets': ['@babel/preset-env'] })
-//         .bundle()
-//         .pipe(sourceStream('bundle.min.js'))
-//         .pipe(buffer())
-//         .pipe(sourcemap.init())
-//         .pipe(uglify())
-//         .pipe(sourcemap.write())
-//         .pipe(gulp.dest(`${init.destPath}/js`))
-// });
+gulp.task('js', () => {
+  browserify({
+    entries: `${init.srcPath}/js/bundle.js`,
+    debug: false
+  })
+  .transform(babelify, { 'presets': ['@babel/preset-env'] })
+  .bundle().on('error', err => {
+    console.log(err);
+  })
+  .pipe(sourceStream('bundle.min.js'))
+  .pipe(buffer())
+  .pipe(sourcemap.init())
+  .pipe(uglify())
+  .pipe(sourcemap.write())
+  .pipe(gulp.dest(`${init.destPath}/js`))
+});
 
 gulp.task('browserSync', () => {
-  return browserSync.init({
+  browserSync.init({
     server: {
       baseDir: `${init.destPath}`
-    }
+    },
+    port: 8001
   })
 });
 
@@ -73,11 +83,11 @@ gulp.task('watch', ['browserSync', 'css'], () => {
 });
 
 gulp.task('clean', () => {
-  return gulp.src(`${init.destPath}/*`)
-             .pipe(clean())
+  gulp.src(`${init.destPath}/*`)
+      .pipe(clean())
 });
 
-gulp.task('default', ['html', 'image', 'css']);
+gulp.task('default', ['html', 'image', 'css', 'js']);
 gulp.task('deploy', () => {
-  runSequence('clean', 'html', 'image', 'css')
+  runSequence('clean', 'html', 'image', 'css', 'js')
 });
