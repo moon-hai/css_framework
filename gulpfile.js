@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var nunjucks = require('gulp-nunjucks');
 var sass = require('gulp-sass');
 var sourcemap = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
+// var autoprefixer = require('gulp-autoprefixer');
 var scssLint = require('gulp-scss-lint');
 var browserify = require('browserify');
 var sourceStream = require('vinyl-source-stream');
@@ -44,7 +44,7 @@ gulp.task('css', () => {
       .pipe(scssLint({ 'config': '.scss-lint.yml' }))
       .pipe(sourcemap.init())
       .pipe(sass({ outputStyle: 'compressed' }))
-      .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
+      // .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
       .pipe(sourcemap.write())
       .pipe(gulp.dest(`${init.destPath}/css`))
       .pipe(browserSync.stream())
@@ -59,9 +59,9 @@ gulp.task('js', () => {
   .bundle().on('error', err => {
     console.log(err);
   })
-  .pipe(sourceStream('main.min.js'))
+  .pipe(sourceStream('main.js'))
   .pipe(buffer())
-  .pipe(sourcemap.init())
+  // .pipe(sourcemap.init())
   .pipe(uglify())
   .pipe(sourcemap.write())
   .pipe(gulp.dest(`${init.destPath}/js`))
