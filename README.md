@@ -11,30 +11,8 @@
 * BrowserSync - Reload when code change
 ```
 
-## Installation
-
-### Install dependencies
-```
-cd /path/to/folder && npm install
-```
-
 ## Usage
-### Start server
 ```
-gulp watch
-```
-
-### Watch files change
-```
-gulp watch
-```
-
-### Build files
-```
-gulp build
-```
-
-### Deploy
-```
-gulp deploy
+  cd path_to_project
+  docker-compose up
 ```
