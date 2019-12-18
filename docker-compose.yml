@@ -1,0 +1,38 @@
+version: '3.7'
+
+# VOLUMES
+volumes:
+  dir-src:
+    driver: local
+    driver_opts:
+      device: $PWD
+      o: bind
+      type: none
+
+#NETWORK
+networks:
+  gulp-network:
+    driver: bridge
+
+# SERVICES
+services:
+  gulp:
+    image: 'node:10'
+    container_name: node-gulp
+    hostname: gulp
+    restart: always
+    networks:
+      - gulp-network
+    volumes:
+      - dir-src:/home/src
+    working_dir: /home/src
+    ports:
+      - '8001:8001'
+    command:
+      - bash
+      - -c
+      - |
+        npm install node-sass
+        npm install
+        npm run build
+        npm run start

@@ -3,7 +3,6 @@ var nunjucks = require('gulp-nunjucks');
 var sass = require('gulp-sass');
 var sourcemap = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
-var scssLint = require('gulp-scss-lint');
 var browserify = require('browserify');
 var sourceStream = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
@@ -38,7 +37,6 @@ gulp.task('css', () => {
         this.emit('end');
         }
       }))
-      .pipe(scssLint({ 'config': '.scss-lint.yml' }))
       .pipe(sourcemap.init())
       .pipe(sass({ outputStyle: 'compressed' }))
       .pipe(autoprefixer({ cascade: false }))

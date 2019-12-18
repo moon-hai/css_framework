@@ -25,11 +25,13 @@
     "gulp-nunjucks": "^3.0.0",
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^4.0.2",
-    "gulp-scss-lint": "^0.7.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
     "run-sequence": "^2.2.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.13.0"
   }
 }
