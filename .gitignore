@@ -17,5 +17,3 @@ Thumbs.db
 /.sass-cache
 /npm-debug.log
 
-## public file
-/public/*
