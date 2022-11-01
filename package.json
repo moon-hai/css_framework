@@ -19,7 +19,7 @@
     "babelify": "^10.0.0",
     "browser-sync": "^2.26.3",
     "browserify": "^16.2.3",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-nunjucks": "^3.0.0",
